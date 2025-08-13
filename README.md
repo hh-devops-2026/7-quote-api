@@ -45,8 +45,7 @@ Value: (paste your Deploy Hook URL)
 9. Create `.github/workflows/deploy.yml`
 This workflow runs only when a release is published.
 
-Goal: Code is deployed only when:
-A release is made and linting & tests pass.
+Goal: Code is deployed only when a release is made and linting & tests pass.
 
 10. Create a Release
 Go to Releases → Create a new release.
