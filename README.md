@@ -21,7 +21,7 @@ npm run lint
 npm test
 ```
 
-6. Create .github/workflows/ci.yml
+6. Create `.github/workflows/ci.yml`
 This workflow runs on every push and pull request. It should run linter and tests
 
 Goal: Every code change is checked automatically.
@@ -42,7 +42,7 @@ Name: RENDER_DEPLOY_HOOK
 Value: (paste your Deploy Hook URL)
 ```
 
-9. Create .github/workflows/deploy.yml
+9. Create `.github/workflows/deploy.yml`
 This workflow runs only when a release is published.
 
 Goal: Code is deployed only when:
