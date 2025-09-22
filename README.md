@@ -55,3 +55,7 @@ Publish release — the deployment workflow will run and trigger Render.
 
 11. Verify Deployment
 Visit your Render URL → `/quote` endpoint should return a random quote.
+
+To confirm that your workflow is functioning correctly, try modifying the source code. For instance, you could update the response in `app.js` to include extra text.
+
+Commit and push your changes to the GitHub repository. Once the Render deployment is complete, check your application to ensure the response reflects your update.
