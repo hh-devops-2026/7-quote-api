@@ -28,13 +28,10 @@ Goal: Every code change is checked automatically.
 
 ## Part 2 — Deployment Workflow
 7. Render Deploy Hook
-Go to Render and sign in.
-
-Create a New Web Service.
-
-Connect your GitHub account and select your  repo.
-
-Copy the Deploy Hook URL.
+- Go to Render and sign in.
+- Create a New Web Service.
+- Connect your GitHub account and select your  repo.
+- Copy the Deploy Hook URL.
 
 8. Add the Deploy Hook as a GitHub Secret 
 ```
