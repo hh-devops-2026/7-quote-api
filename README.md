@@ -1,5 +1,7 @@
 # Quote of the Day API - CI/CD pipeline
 
+**NOTE** This assignment is done using the public repository due to Render.com restrictions.
+
 In this assignment, you will:
 - Work with a pre-built Node.js API that returns random motivational quotes.
 - Fix linting errors and make all tests pass.
