@@ -41,7 +41,7 @@ Value: (paste your Deploy Hook URL)
 ```
 9. Add a new Job that deploys app to the Render using web hook.
 - Job is run when new code is pushed to main branch.
-- Job is executed only if CI workflow is run successfully.
+- Job is executed only after CI workflow is run successfully.
 
 Verify Deployment
 
