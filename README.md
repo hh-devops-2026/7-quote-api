@@ -11,7 +11,7 @@ In this assignment, you will:
 
 # Steps to Complete:
 
-## Part 1 - CI workflow
+## Part 1 - CI workflow (1 point)
 1. Clone repository locally
 3. Install Dependencies
 4. Fix Linting Issues
@@ -22,17 +22,16 @@ npm run lint
 ```
 npm test
 ```
-
-6. Create `.github/workflows/ci.yml`
+6. Create `.github/workflows/ci-cd.yml`
 This workflow runs on every push and pull request. It should run linter and tests
 
 Goal: Every code change is checked automatically.
 
-## Part 2 — Deployment Workflow
+## Part 2 — CD job (2 points)
 7. Render Deploy Hook
 - Go to Render and sign in.
 - Create a New Web Service.
-- Connect your GitHub account and select your  repo.
+- Connect your GitHub account and select your repo.
 - Copy the Deploy Hook URL.
 
 8. Add the Deploy Hook as a GitHub Secret 
@@ -40,22 +39,26 @@ Goal: Every code change is checked automatically.
 Name: RENDER_DEPLOY_HOOK
 Value: (paste your Deploy Hook URL)
 ```
+9. Add a new Job that deploys app to the Render using web hook.
+- Job is run when new code is pushed to main branch.
+- Job is executed only if CI workflow is run successfully.
 
-9. Create `.github/workflows/deploy.yml`
-This workflow runs only when a release is published.
+Verify Deployment
 
-Goal: Code is deployed only when a release is made and linting & tests pass.
-
-10. Create a Release
-Go to Releases → Create a new release.
-
-Tag version (e.g., v1.0.0).
-
-Publish release — the deployment workflow will run and trigger Render.
-
-11. Verify Deployment
 Visit your Render URL → `/quote` endpoint should return a random quote.
 
 To confirm that your workflow is functioning correctly, try modifying the source code. For instance, you could update the response in `app.js` to include extra text.
 
 Commit and push your changes to the GitHub repository. Once the Render deployment is complete, check your application to ensure the response reflects your update.
+
+## Part 3 - Release deployment (2 points)
+Goal: Code is deployed only when GitHub release is published.
+
+10. Move deployment to own workflow file `cd.yml`.
+- This workflow runs when new release is published.
+
+11. Create Github Release
+Go to Releases → Create a new release.
+Tag version (e.g., v1.0.0).
+
+Publish release — the deployment workflow will run and triggers Render deployment.
