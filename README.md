@@ -14,11 +14,11 @@ In this assignment, you will:
 ## Part 1 - CI workflow (1 point)
 1. Clone repository locally
 3. Install Dependencies
-4. Fix Linting Issues
+4. Run linter and fix issues if there are any.
 ```
 npm run lint
 ```
-5. Fix Failing Tests
+5. Run tests
 ```
 npm test
 ```
